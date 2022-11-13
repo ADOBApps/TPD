@@ -1,11 +1,11 @@
 # _*_ coding: utf-8 _*_
 """
-Created on 08/07/2022
-    Class to graph linearRegressions
-@author: ADOB
-
-require matplotlib, numpy, scipy, seaborn, sklearn, pandas, statsmodels
-execute: pip install matplotlib numpy scipy seaborn sklearn pandas statsmodels
+@author: Acxel David Orozco Baldomero (ADOB)
+@date: 08/07/2022
+@description: Class to graph linearRegressions
+@version: 8.07
+@require: matplotlib, numpy, scipy, seaborn, sklearn, pandas, statsmodels
+@execute: 'pip install matplotlib numpy scipy seaborn sklearn pandas statsmodels'
 """
 
 # Tratamiento de datos
