@@ -25,9 +25,15 @@ r1_T_Beta1 = [0.0232021, 0.018691, 0.0147355, 0.0113909, 0.00962549]
 r2_T_Beta3 = [0.0655879, 0.0513954, 0.0398743, 0.033988, 0.0276233]
 r3_T_Beta10 = [0.216331, 0.160310, 0.129230, 0.106845, 0.0884966]
 
-mygraph = Graphmaker()
-
+'''Activation energy = 120 kJ/mol'''
+x_CA = [0.2, 0.4, 0.6, 0.8, 1.0]
+ca_T_r1_Beta1 = [0.00333646, 0.00682132, 0.010232, 0.0135684, 0.0166823]
+ca_T_r2_Beta3 = [0.00945724, 0.0189516, 0.028543, 0.037829, 0.047081]
+ca_T_r3_Beta10 = [0.0295631, 0.0589407, 0.0886336, 0.118178, 0.147815]
 # ==========================================================================
+
+
+mygraph = Graphmaker()
 
 # Plot graph and linearRegression type Time vs Temperature
 
@@ -70,6 +76,27 @@ def Makegrap():
         r'$\beta_{3}$',
         r'$\beta_{10}$',
         2
+    )
+
+    # Desorption rate vs Fractional surface coverage
+    '''
+    "Velocidad de desorción en función
+    de la fracción de cobertura superficial"
+    '''
+    mygraph.GraphX1Y3(
+        r"$\nu{}=f(C_{A}^{n})$",
+        r"$C_{A}^{n}$",
+        r"$\nu{}(\frac{mol}{L\dot{}s})$",
+        "VDvsCA.png",
+        x_CA,
+        ca_T_r1_Beta1,
+        ca_T_r2_Beta3,
+        ca_T_r3_Beta10,
+        '*', 's', '8',
+        r'$\beta_{1}$',
+        r'$\beta_{3}$',
+        r'$\beta_{10}$',
+        1
     )
 
 
